@@ -49,7 +49,7 @@ const MediaGallery = props => {
     closeMediaLibrary
   } = props
   const [pagination, setPagination] = useState((({ page = 1, perPage = 15 }) => ({ page, perPage }))(props))
-  const [sort, setSort] = useState((({ field = 'createdAt', order = 'DESC' }) => ({ field, order }))(props))
+  const [sort, setSort] = useState((({ field = 'createdAt', order = 'ASC' }) => ({ field, order }))(props))
   const { data, total, ids, loading, error } = useGetList('upload/files', pagination, sort)
   const [deleteDialog, setDeleteDialog] = useState(false)
 
